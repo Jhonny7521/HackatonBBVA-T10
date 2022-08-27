@@ -3,7 +3,7 @@ from flask_app.config.mysqlconnection import MySQLConnection, connectToMySQL
 
 class Operation:
   def __init__(self, data):
-    self.id = data['id']
+    self.id_operation = data['id_operation']
     self.operation_name = data['operation_name']
 
   @classmethod
