@@ -1,5 +1,9 @@
+#1° Inicializamos el proyecto
 from flask import Flask
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+app.secret_key = "Mi llave secreta"
 
-app.secret_key = "Este es mi texto secreto"
+# CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "http://localhost"}})
